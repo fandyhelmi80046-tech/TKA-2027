@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-[#F4F7FB] text-[#132030] antialiased selection:bg-blue-600/15 selection:text-blue-900 dark:bg-[#0B131E] dark:text-[#E6EDF6] dark:selection:bg-blue-400/20 dark:selection:text-blue-100;
+  }
+
+  .font-mono-num {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .overflow-x-auto {
+    overflow: visible !important;
+  }
+
+  .print-report-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .print-report-sheet table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .print-report-sheet th,
+  .print-report-sheet td {
+    border: 1px solid #cbd5e1 !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+
+  .print-report-sheet tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-only-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .print-card {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1.5px solid #111827 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

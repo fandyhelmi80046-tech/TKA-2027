@@ -1,0 +1,6 @@
+{
+  "name": "Try Out TKA",
+  "description": "Aplikasi Simulasi CBT dan Manajemen Try Out Tes Kemampuan Akademik (TKA).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
